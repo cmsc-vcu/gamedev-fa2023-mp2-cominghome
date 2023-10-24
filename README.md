@@ -1,6 +1,5 @@
 # Coming Home
 
-This is a template repo for Intro to Game Dev, Fall 2023, Minor Project 2.
-See:
-  <https://virginiacommonwealth.instructure.com/courses/86151/assignments/735642>
-  
+Created by: Kealey Blandford and Fiona
+
+It is a 2D Top-Down mystery game that is Halloween-themed.
