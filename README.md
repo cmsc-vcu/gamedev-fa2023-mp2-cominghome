@@ -1,4 +1,4 @@
-# gamedev-fa2023-mp2-template
+# Coming Home
 
 This is a template repo for Intro to Game Dev, Fall 2023, Minor Project 2.
 See:
