@@ -2,7 +2,7 @@
 
 Play through video: https://youtu.be/UFW0uYjk7aw
 
-Created by: Kealey Blandford (CS) and Fiona Bush (ART)
+Created by: Kealey Blandford (CS) and Fiona Bush (CA)
 
 It is a 2D Top-Down mystery game that is Halloween-themed and made with Unity.
 
