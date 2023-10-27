@@ -1,21 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class LeavesAnimation : MonoBehaviour
+public class XMark : MonoBehaviour
 {
-    
-    private Animator anim;
-
-    public string animationName = "Leaves";
+    [SerializeField] InventoryManager.AllItems requiredItem;
 
     private bool playerInside = false;
 
-    private void Start()
-    {
-        anim = GetComponent<Animator>();
-        anim.speed = 0;
-    }
+    [SerializeField] private Text shovelText;
 
     public bool HasRequiredItem(InventoryManager.AllItems itemRequired)
     {
@@ -34,6 +28,10 @@ public class LeavesAnimation : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerInside = true;
+            if (!HasRequiredItem(requiredItem))
+            {
+                shovelText.text = "Need Shovel.";
+            }
         }
     }
 
@@ -42,6 +40,7 @@ public class LeavesAnimation : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerInside = false;
+            shovelText.text = "";
         }
     }
 
@@ -49,8 +48,10 @@ public class LeavesAnimation : MonoBehaviour
     {
         if (playerInside)
         {
-            anim.Play(animationName);
-            Destroy(gameObject);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
