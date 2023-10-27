@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 223063632644158097}
   - component: {fileID: 5428042274391293876}
   - component: {fileID: 5010148385002456023}
+  - component: {fileID: 8077764507735359866}
   m_Layer: 0
   m_Name: Leaf
   m_TagString: Untagged
@@ -152,3 +153,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0605412, y: 1.7748871}
   m_EdgeRadius: 0
+--- !u!114 &8077764507735359866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6468996981655351467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56018c4c880df4775b3152831d82a397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredItem: 1
+  animationName: Leaves

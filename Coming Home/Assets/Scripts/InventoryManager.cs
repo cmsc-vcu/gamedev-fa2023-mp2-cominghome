@@ -42,4 +42,9 @@ public class InventoryManager : MonoBehaviour
         Key,
         Shovel
     }
+
+    public bool HasItem(AllItems itemToCheck)
+    {
+        return _inventoryItems.Contains(itemToCheck);
+    }
 }

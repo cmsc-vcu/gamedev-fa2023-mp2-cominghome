@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class LeavesAnimation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Animator anim;
+
+    public string animationName = "Leaves";
+
+    public InventoryManager.AllItems requiredItem = InventoryManager.AllItems.Shovel;
+
+    private void Start()
     {
-        
+        anim = GetComponent<Animator>();
+        anim.speed = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    private bool HasRequiredItem(InventoryManager.AllItems itemRequired)
     {
-        
+        return InventoryManager.Instance.HasItem(itemRequired);
+    }
+
+    private void Update()
+    {
+         if (Input.GetKeyDown(KeyCode.E))
+         {
+              if (HasRequiredItem(requiredItem))
+              {
+                anim.speed = 1;
+                anim.Play(animationName);
+              }
+         }
     }
 }
